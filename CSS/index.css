@@ -1,0 +1,53 @@
+body {
+    background-color: #f7ecde;
+    font-family: "PT Sans Caption", sans-serif;
+    margin: 0;
+}
+h1 {
+    font-family: "Pacifico", cursive;
+    font-size: 50px;
+}
+h1::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 34%;
+    bottom: 0;
+    background-color: #fec260;
+    transition-duration: 0.4s;
+    z-index: -1;
+}
+h1:hover::before {
+    height: 67%;
+}
+.child2 {
+    border-width: 2px 0 2px 0;
+    border-style: dotted;
+    width: 92%;
+}
+button {
+    background-color: #d1512d !important;
+    border-color: #d1512d !important;
+}
+button:hover{
+    background-color: #ba492a !important;
+}
+h2 {
+    font-family: "Righteous", cursive;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+label {
+    font-weight: 600;
+}
+table {
+    width: 92%;
+    text-align: center;
+}
+table tr {
+    border-bottom-width: 1px;
+    border-color: rgb(228, 228, 228);
+    box-shadow: inset 0 0 0 9999px transparent;
+}
