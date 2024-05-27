@@ -3,6 +3,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Bookmark</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
         <link rel="icon" href="Images/bookmark.png" width="16px" height="16px">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,37 +18,66 @@
         <script src="https://kit.fontawesome.com/bd735b1809.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div class="parent p-sm-5 vh-100 d-sm-flex flex-sm-column align-items-sm-center">
-            <div class="child1 mt-sm-2">
+        <div class="parent">
+           <div class="container1 p-5 vh-100 d-flex flex-column align-items-center">
+            <div class="child1 mt-2">
                 <h1 class="position-relative">Bookmarker</h1>
             </div>
-            <div class="child2 mt-sm-5 p-sm-3 d-sm-flex flex-sm-column align-items-sm-center">
-                <h2 class="mb-sm-2">
+            <div class="child2 mt-5 p-3 d-flex flex-column align-items-center">
+                <h2 class="mb-2">
                     <i class="fa-solid fa-bookmark"></i>    
                     Bookmark your favorite sites
                     <i class="fa-solid fa-bookmark"></i>
                 </h2>
-                <div class="firstinput my-sm-4 w-100">
-                    <label for="bookname" class="pb-sm-2"><i class="fa-solid fa-book-bookmark pe-2 me-sm-1"></i>Site Name</label>
-                    <input type="text" class="form-control w-100" id="bookname" placeholder="Bookmark Name">
+                <div class="firstinput my-4 w-100">
+                    <label for="bookname" class="pb-2"><i class="fa-solid fa-book-bookmark pe-2 me-1"></i>Site Name</label>
+                    <input type="text" oninput="validname(this)" class="form-control w-100 hambozo" id="bookname" placeholder="Bookmark Name">
                 </div>
-                <div class="secondinput w-100 mb-sm-4">
-                    <label for="URL" class="pb-sm-2"><i class="fa-solid fa-link pe-2 me-sm-1"></i>Site URL</label>
-                    <input type="url" class="form-control w-100" id="URL" placeholder="Website URL">
+                <div class="secondinput w-100 mb-4">
+                    <label for="URL" class="pb-2"><i class="fa-solid fa-link pe-2 me-1"></i>Site URL</label>
+                    <input type="url" oninput="validurl(this)" class="form-control w-100 hombozo" id="URL" placeholder="Website URL">
                 </div>
-                <button onclick="add()" class="btn btn-success px-sm-5">Submit</button>
+                <button onclick="add()" class="btn btn-success px-5">Submit</button>
             </div>
-            <table class="my-sm-4 bg-white">
+            <table class="my-4 bg-white">
                 <thead>
                     <tr>
-                        <th class="py-sm-2">Index</th>
-                        <th class="py-sm-2">Website Name</th>
-                        <th class="py-sm-2">Visit</th>
-                        <th class="py-sm-2">Delete</th>
+                        <th class="py-2">Index</th>
+                        <th class="py-2">Website Name</th>
+                        <th class="py-2">Visit</th>
+                        <th class="py-2">Delete</th>
                     </tr>
                 </thead>
                 <tbody id="demo"></tbody>
             </table>
+           </div>
+           <div class="box-info position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center d-none" id="content">
+            <div class="box-content bg-white p-4 rounded-2 shadow-lg">
+                <header class="box-header w-100 d-flex justify-content-between align-items-center mb-4">
+                    <div class="circles d-flex">
+                        <span class="rounded-circle me-2"></span>
+                        <span class="rounded-circle me-2"></span>
+                        <span class="rounded-circle me-2"></span>
+                    </div>
+                    <button class="btn border-0" onclick="Close()">
+                        <i class="fa-solid fa-xmark close fs-3"></i>
+                    </button>
+                </header>
+                <p class="mb-2 pb-2">
+                    Site name or URL is not valid,Please follow the rules below :
+                </p>
+                <ol class="px-0 m-0">
+                    <li>
+                        <i class="fa-regular fa-circle-right p-2"></i>
+                        <span>Site Name must contain at least 3 characters and first letter is capital</span>
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-circle-right p-2"></i>
+                        <span>Site Url must be a valid one</span>
+                    </li>
+                </ol>
+            </div>
+        </div>
         </div>
         <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
         <script src="JS/main.js"></script>

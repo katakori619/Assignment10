@@ -57,10 +57,52 @@ table tbody tr td .Green{
 table tbody tr td .Green:hover {
     background-color: #889934;
 }
-#bookname:focus , #url:focus {
+.hambozo:focus , .hombozo:focus {
     border-color: #d99c39;
     box-shadow: 0 0 0 0.25rem #fec26055;
 }
 ::selection {
     background-color: #fec260;
+}
+ol {
+    list-style: none;
+}
+.box-content{
+    width: 500px;
+}
+.box-info p{
+    font-family: "Bree Serif", serif;
+    font-size: 21px;
+    line-height: 1.3;
+}
+ol li{
+    font-size: 18px;
+    padding-top: 10px;
+}
+.circles span{
+    width: 20px;
+    height: 20px;
+}
+.circles span:nth-of-type(1){
+    background-color: #f15f5d;
+}
+.circles span:nth-of-type(2){
+    background-color: #febe2e;
+}
+.circles span:nth-of-type(3){
+    background-color: #4db748;
+}
+ol li i{
+    color: #bb4120;
+}
+.box-content button{
+    background-color: transparent !important;
+}
+.box-info {
+    background-color: #0007;
+}
+@media (max-width:575px){
+    .container1{
+        padding: 0 !important;
+    }
 }
