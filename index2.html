@@ -7,6 +7,41 @@
     <link rel="stylesheet" href="CSS/index2.css">
 </head>
 <body>
+    <div class="w-75 mx-auto py-sm-5">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="productname" placeholder="Product Name">
+            <label for="productname">Product Name :</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="productprice" placeholder="Product Price">
+            <label for="productprice">Product Price :</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input list="products" type="text" class="form-control" id="productcategory" placeholder="Product Category">
+            <label for="productcategory">Product Category :</label>
+            <datalist id="products">
+                <option value="TV"></option>
+                <option value="Mobile"></option>
+                <option value="Laptop"></option>
+                <option value="Screens"></option>
+                <option value="Electronics"></option>
+            </datalist>
+        </div>
+        <div class="form-floating mb-3">
+            <textarea type="text" class="form-control" id="productdescription" placeholder="Product Description"></textarea>
+            <label for="productdescription">Product Description :</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="file" class="form-control" id="productimage" placeholder="Product Image">
+            <label for="productimage">Product Image :</label>
+        </div>
+        <button class="btn btn-info text-white" onclick="addproduct()">Add Product</button>
+        <input type="text" oninput="searchbyname()" placeholder="search by Name" id="searchname" class="form-control w-75 mt-sm-3">
+    </div>
+    <div class="container">
+        <div class="row py-sm-3" id="amogos"></div>
+    </div>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script src="JS/main2.js"></script>
 </body>
 </html>

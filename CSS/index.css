@@ -51,3 +51,16 @@ table tr {
     border-color: rgb(228, 228, 228);
     box-shadow: inset 0 0 0 9999px transparent;
 }
+table tbody tr td .Green{
+    background-color: #9eb23b;
+}
+table tbody tr td .Green:hover {
+    background-color: #889934;
+}
+#bookname:focus , #url:focus {
+    border-color: #d99c39;
+    box-shadow: 0 0 0 0.25rem #fec26055;
+}
+::selection {
+    background-color: #fec260;
+}

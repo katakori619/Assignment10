@@ -3,7 +3,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Bookmark</title>
-        <link rel="icon" href="bookmark.png" width="16px" height="16px">
+        <link rel="icon" href="Images/bookmark.png" width="16px" height="16px">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -33,7 +33,7 @@
                     <label for="URL" class="pb-sm-2"><i class="fa-solid fa-link pe-2 me-sm-1"></i>Site URL</label>
                     <input type="url" class="form-control w-100" id="URL" placeholder="Website URL">
                 </div>
-                <button class="btn btn-success px-sm-5">Submit</button>
+                <button onclick="add()" class="btn btn-success px-sm-5">Submit</button>
             </div>
             <table class="my-sm-4 bg-white">
                 <thead>
@@ -44,6 +44,7 @@
                         <th class="py-sm-2">Delete</th>
                     </tr>
                 </thead>
+                <tbody id="demo"></tbody>
             </table>
         </div>
         <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
